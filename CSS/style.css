@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: #c8e8e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 85%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card .informations {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.card .informations::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+}
+
+.card .informations .address {
+    margin: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .informations .address i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.card .informations .address .topic {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .informations .address .text-one,
+.card .informations .address .text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.card .send-us {
+    width: 70%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .send-us .content h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.card .send-us .content span {
+    font-size: 14px;
+    color: #afafb6;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card .send-us .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card .send-us .inputs input,
+.card .send-us .inputs textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    height: 50px;
+}
+.card .send-us .inputs textarea {
+    min-height: 100px;
+    padding: 10px 15px;
+    resize: vertical;
+    border-radius: 6px;
+}
+
+.card .send-us .send {
+    margin-top: 15px;
+}
+
+.card .send-us .send button {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #3e2093;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.card .send-us .send button:hover {
+    background: #5029bc;
+}
+
+@media (max-width: 950px) {
+    .card {
+        width: 90%;
+        padding: 30px 40px 40px 35px;
+        flex-direction: column;
+    }
+
+    .card .send-us {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .card .informations {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card .informations::before {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .card .informations {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .card .send-us .inputs {
+        gap: 10px;
+    }
+}
